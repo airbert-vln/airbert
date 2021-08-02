@@ -4,7 +4,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-<INDEX>-green.svg)](https://arxiv.org/abs/<INDEX>)
 [![R2R 1st](https://img.shields.io/badge/R2R-🥇-green.svg)](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270)
 [![ICCV 2021](https://img.shields.io/badge/ICCV-2021-green.svg)](http://iccv2021.thecvf.com/home)
-[![site](https://img.shields.io/badge/Project-🌐-green.svg)](https://airbert-vln.github.io)
+[![site](https://img.shields.io/badge/site-🌐-green.svg)](https://airbert-vln.github.io)
 
 This repository stores the codebase for Airbert and some pre-trained model.
 It is based on the codebase of [VLN-BERT](https://github.com/arjunmajum/vln-bert).
