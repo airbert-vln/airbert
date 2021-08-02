@@ -160,9 +160,9 @@ python train.py \
 
 You can download a pretrained model [here](addmodel).
 
-## 4. Fine-tuning on REVERIE
+## 4. Fine-tuning on REVERIE and R2R in Generative Setting
 
-Please see the repository [dedicated for this dataset](https://github.com/airbert-vln/reverie).
+Please see the repository [dedicated for finetuning Airbert in generative setting](https://github.com/airbert-vln/airbert-recurrentvln).
 
 ## 5. Few-shot learning
 
