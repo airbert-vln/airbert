@@ -4,7 +4,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-<INDEX>-green.svg)](https://arxiv.org/abs/<INDEX>)
 [![R2R 1st](https://img.shields.io/badge/R2R-🥇-green.svg)](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270)
 [![ICCV 2021](https://img.shields.io/badge/ICCV-2021-green.svg)](http://iccv2021.thecvf.com/home)
-[![Project](https://img.shields.io/badge/Project-🌐-green.svg)](https://airbert-vln.github.io)
+[![site](https://img.shields.io/badge/Project-🌐-green.svg)](https://airbert-vln.github.io)
 
 This repository stores the codebase for Airbert and some pre-trained model.
 It is based on the codebase of [VLN-BERT](https://github.com/arjunmajum/vln-bert).
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 You need first to download the BnB dataset, prepare an LMDB file containing visual features and the BnB dataset files. Everything is described in our [BnB dataset repository](https://github.com/airbert-vln/bnb-dataset).
 
-## :muscle: 2. Training Airbert
+## :muscle: 3. Training Airbert
 
 Download a checkpoint of VilBERT pre-trained on [Conceptual Captions](https://dl.fbaipublicfiles.com/vilbert-multi-task/pretrained_model.bin).
 
@@ -39,10 +39,10 @@ export name=pretraining-with-captionless-insertion
 echo $name
 sbatch --job-name $name \
  --export=name=$name,pretrained=vilbert.bin,args=" --masked_vision --masked_language --min_captioned 2 --separators",prefix=2capt+ \
- train_bnb.slurm
+ train-bnb-8.slurm
 ```
 
-### :chains: 2.1. Concatenation
+### :chains: 3.1. Concatenation
 
 Make sure you have the following dataset file:
 
@@ -63,7 +63,7 @@ python train_bnb.py \
 
 
 
-### :busts_in_silhouette: 2.2. Image merging
+### :busts_in_silhouette: 3.2. Image merging
 
 Make sure you have the following dataset file:
 
@@ -84,7 +84,7 @@ python train_bnb.py \
 ```
 
 
-### 👨‍👩‍👧 2.3. Captionless insertion
+### 👨‍👩‍👧 3.3. Captionless insertion
 
 Make sure you have the following dataset file:
 
@@ -104,7 +104,7 @@ python train_bnb.py \
   --masked_language
 ```
 
-### 👣 2.4. Instruction rephrasing
+### 👣 3.4. Instruction rephrasing
 
 Make sure you have the following dataset file:
 
@@ -126,10 +126,15 @@ python train_bnb.py \
   --skeleton data/np_train.json
 ```
 
-##  3. Fine-tuning on R2R 
+## :detective: 4. Fine-tuning on R2R in Discriminative Setting
 
+First of all, you need to download the R2R data:
 
-### 3.1. Fine-tune with masking losses
+```
+make r2r
+```
+
+### 4.1. Fine-tune with masking losses
 
 ```
 python train.py \
@@ -138,7 +143,7 @@ python train.py \
   --masked_language --masked_vision --no_ranking
 ```
 
-### 3.2. Fine-tune with the ranking and the shuffling loss
+### 4.2. Fine-tune with the ranking and the shuffling loss
 
 ```
 python train.py \
@@ -147,9 +152,17 @@ python train.py \
   --shuffle_visual_features
 ```
 
-### 3.3. Fine-tune with the ranking and the shuffling loss and the speaker data augmented
+### 4.3. Fine-tune with the ranking and the shuffling loss and the speaker data augmented
 
+Download the [augmented paths](http://www.cs.unc.edu/~airsplay/aug_paths.json) from [EnvDrop](https://github.com/airsplay/R2R-EnvDrop):
+
+```bash
+make speaker
 ```
+
+Then use the `train.py` script:
+
+```bash
 python train.py \
   --from_pretrained r2rM.bin \
   --save_name r2rRS \
@@ -158,18 +171,18 @@ python train.py \
   --beam_prefix aug_
 ```
 
-You can download a pretrained model [here](addmodel).
+You can download a pretrained model [from our model zoo](https://github.com/airbert-vln/model-zoos).
 
-## 4. Fine-tuning on REVERIE and R2R in Generative Setting
+## :pregnant_woman: 5. Fine-tuning on REVERIE and R2R in Generative Setting
 
 Please see the repository [dedicated for finetuning Airbert in generative setting](https://github.com/airbert-vln/airbert-recurrentvln).
 
-## 5. Few-shot learning
+## :four_leaf_clover: 6. Few-shot learning
 
 You can build the exact same few-shot learning datasets from this command:
 
 ```bash
-python scripts/few_shot.py
+make fewshot
 ```
 
 
