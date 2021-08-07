@@ -18,7 +18,7 @@ from utils.dataset.common import pad_packed, load_json_data
 from utils.dataset.zero_shot_dataset import ZeroShotDataset
 from utils.dataset import PanoFeaturesReader
 
-from vln_bert import VLNBert
+from airbert import VLNBert
 from train import get_model_input, get_mask_options
 
 logging.basicConfig(

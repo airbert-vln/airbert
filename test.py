@@ -19,7 +19,7 @@ from utils.dataset.beam_dataset import BeamDataset
 from utils.dataset.perturbate_dataset import PerturbateDataset
 from utils.dataset import PanoFeaturesReader
 
-from vln_bert import VLNBert
+from airbert import VLNBert
 from train import get_model_input, get_mask_options
 
 logging.basicConfig(

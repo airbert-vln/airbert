@@ -25,7 +25,7 @@ from utils.dataset import BnBFeaturesReader
 from utils.dataset.bnb_dataset import BnBDataset
 from utils.dataset import PanoFeaturesReader
 
-from vln_bert import VLNBert
+from airbert import VLNBert
 from train import get_model_input, get_mask_options, get_target
 
 logging.basicConfig(

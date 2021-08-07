@@ -22,7 +22,7 @@ from tensorboardX import SummaryWriter
 from transformers import AutoTokenizer, BertTokenizer
 
 from vilbert.optimization import AdamW, WarmupLinearSchedule
-from vln_bert import VLNBert, BERT_CONFIG_FACTORY
+from airbert import VLNBert, BERT_CONFIG_FACTORY
 
 from utils.cli import get_parser
 from utils.distributed import set_cuda, wrap_distributed_model, get_local_rank

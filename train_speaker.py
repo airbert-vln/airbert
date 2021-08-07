@@ -22,7 +22,7 @@ from apex.parallel import DistributedDataParallel as DDP
 from transformers import AutoTokenizer, BertTokenizer
 from vilbert.optimization import AdamW, WarmupLinearSchedule
 from vilbert.vilbert import BertConfig
-from vln_bert import VLNBert
+from airbert import VLNBert
 from utils.cli import get_parser
 from utils.dataset import PanoFeaturesReader
 from utils.dataset.speak_dataset import SpeakDataset

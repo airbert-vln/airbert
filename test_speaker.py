@@ -22,7 +22,7 @@ from utils.dataset.speak_dataset import SpeakDataset
 from utils.dataset.bnb_speak_dataset import BnBSpeakDataset
 from utils.dataset import PanoFeaturesReader, BnBFeaturesReader
 from utils.dataset.common import load_json_data
-from vln_bert import VLNBert
+from airbert import VLNBert
 from train_speaker import get_batch_size, get_instr_length, Batch
 
 logging.basicConfig(

@@ -24,7 +24,7 @@ from tensorboardX import SummaryWriter
 from transformers import BertTokenizer
 
 from vilbert.optimization import AdamW, WarmupLinearSchedule, ConstantLRSchedule
-from vln_bert import VLNBert, BERT_CONFIG_FACTORY
+from airbert import VLNBert, BERT_CONFIG_FACTORY
 
 from utils.cli import get_parser
 from utils.dataset import BnBFeaturesReader
