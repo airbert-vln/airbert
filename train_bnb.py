@@ -24,7 +24,7 @@ from tensorboardX import SummaryWriter
 from transformers import BertTokenizer
 
 from vilbert.optimization import AdamW, WarmupLinearSchedule, ConstantLRSchedule
-from airbert import VLNBert, BERT_CONFIG_FACTORY
+from airbert import Airbert, BERT_CONFIG_FACTORY
 
 from utils.cli import get_parser
 from utils.dataset import BnBFeaturesReader
@@ -303,9 +303,9 @@ def main():
 
     model: nn.Module
     if len(args.from_pretrained) == 0:  # hack for catching --from_pretrained ""
-        model = VLNBert(config)
+        model = Airbert(config)
     else:
-        model = VLNBert.from_pretrained(
+        model = Airbert.from_pretrained(
             args.from_pretrained, config, default_gpu=default_gpu
         )
 

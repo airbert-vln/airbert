@@ -22,7 +22,7 @@ from apex.parallel import DistributedDataParallel as DDP
 from transformers import AutoTokenizer, BertTokenizer
 from vilbert.optimization import AdamW, WarmupLinearSchedule
 from vilbert.vilbert import BertConfig
-from airbert import VLNBert
+from airbert import Airbert
 from utils.cli import get_parser
 from utils.dataset import PanoFeaturesReader
 from utils.dataset.speak_dataset import SpeakDataset
@@ -196,9 +196,9 @@ def main():
     config.convert_mask = True # type: ignore
 
     if len(args.from_pretrained) == 0:  # hack for catching --from_pretrained ""
-        model = VLNBert(config)
+        model = Airbert(config)
     else:
-        model = VLNBert.from_pretrained(
+        model = Airbert.from_pretrained(
             args.from_pretrained, config, default_gpu=default_gpu
         )
 

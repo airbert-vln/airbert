@@ -22,7 +22,7 @@ from utils.dataset.speak_dataset import SpeakDataset
 from utils.dataset.bnb_speak_dataset import BnBSpeakDataset
 from utils.dataset import PanoFeaturesReader, BnBFeaturesReader
 from utils.dataset.common import load_json_data
-from airbert import VLNBert
+from airbert import Airbert
 from train_speaker import get_batch_size, get_instr_length, Batch
 
 logging.basicConfig(
@@ -140,7 +140,7 @@ def test_speaker(args):
     config = BertConfig.from_json_file(args.config_file)
     config.cat_highlight = False  # type: ignore
     config.convert_mask = True  # type: ignore
-    model = VLNBert.from_pretrained(args.from_pretrained, config, default_gpu=True)
+    model = Airbert.from_pretrained(args.from_pretrained, config, default_gpu=True)
     model.cuda()
     logger.info(f"number of parameters: {sum(p.numel() for p in model.parameters()):,}")
 

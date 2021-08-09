@@ -19,7 +19,7 @@ from utils.dataset.beam_dataset import BeamDataset
 from utils.dataset.perturbate_dataset import PerturbateDataset
 from utils.dataset import PanoFeaturesReader
 
-from airbert import VLNBert
+from airbert import Airbert
 from train import get_model_input, get_mask_options
 
 logging.basicConfig(
@@ -114,7 +114,7 @@ def main():
 
     config = BertConfig.from_json_file(args.config_file)
     config.cat_highlight = args.cat_highlight # type: ignore
-    model = VLNBert.from_pretrained(args.from_pretrained, config, default_gpu=True)
+    model = Airbert.from_pretrained(args.from_pretrained, config, default_gpu=True)
     model.cuda()
     logger.info(f"number of parameters: {sum(p.numel() for p in model.parameters()):,}")
 

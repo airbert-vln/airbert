@@ -37,7 +37,7 @@ CLS_MODEL_FACTORY = {
 }
 
 
-class VLNBert(PreTrainedModel):
+class Airbert(PreTrainedModel):
     def __init__(self, config, dropout_prob=0.1):
         super().__init__(config)
 
