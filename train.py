@@ -107,31 +107,18 @@ def compute_metrics(batch: List[torch.Tensor], outputs: Dict[str, torch.Tensor],
             linguistic_predictions, linguistic_target, ignore_index=-1
         )
 
-    # calculate the token-level loss
-    highlight_loss = torch.tensor(0, device=device)
-    if args.highlighted_language and not args.cat_highlight:
-        num_cand = get_num_options(batch)
-        batch_size = get_batch_size(batch)
-        highlighted_predictions = outputs["hightlight"].view(batch_size, num_cand, -1)
-        highlighted_words = get_highlights(batch).float()
-        highlight_logit = (highlighted_predictions * highlighted_words).sum(2)
-
-        target = get_target(batch)
-
-        highlight_loss = F.cross_entropy(highlight_logit, target, ignore_index=-1)
-
     # calculate the trajectory re-ranking loss
     ranking_loss = torch.tensor(0, device=device)
     correct = torch.tensor(0, device=device)
     if not args.no_ranking:
         target = get_target(batch)
-        vil_logit = pad_packed(outputs["ranking"].squeeze(1), opt_mask)
+        vil_logit = pad_packed(outputs["action"].squeeze(1), opt_mask)
         ranking_loss = F.cross_entropy(vil_logit, target, ignore_index=-1)
         # calculate accuracy
         correct = torch.sum(torch.argmax(vil_logit, 1) == target).float()
 
     # calculate the final loss
-    loss = ranking_loss + vision_loss + linguistic_loss + highlight_loss
+    loss = ranking_loss + vision_loss + linguistic_loss
     if args.gradient_accumulation_steps > 1:
         loss = loss / args.gradient_accumulation_steps
 
@@ -660,7 +647,7 @@ def val_epoch(epoch: int, model, tag, data_loader, writer, default_gpu, args, gl
         opt_mask = batch[13]
 
         if not args.no_ranking:
-            vil_logit = pad_packed(outputs["ranking"].squeeze(1), opt_mask)
+            vil_logit = pad_packed(outputs["action"].squeeze(1), opt_mask)
 
             # calculate loss
             loss = F.binary_cross_entropy_with_logits(vil_logit, target.float())
