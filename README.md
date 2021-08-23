@@ -1,7 +1,7 @@
 # :houses: Airbert: In-domain Pretraining for Vision-and-Language Navigation :houses:
 
 [![MIT](https://img.shields.io/github/license/airbert-vln/bnb-dataset)](./LICENSE.md)
-[![arXiv](https://img.shields.io/badge/arXiv-red.svg)](https://arxiv.org/abs/2108:09105)
+[![arXiv](https://img.shields.io/badge/arXiv-2108.09105-red.svg)](https://arxiv.org/abs/2108.09105)
 [![R2R 1st](https://img.shields.io/badge/R2R-🥇-green.svg)](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270)
 [![ICCV 2021](https://img.shields.io/badge/ICCV-2021-green.svg)](http://iccv2021.thecvf.com/home)
 [![site](https://img.shields.io/badge/site-🌐-green.svg)](https://airbert-vln.github.io)
