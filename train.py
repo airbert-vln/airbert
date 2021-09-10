@@ -33,7 +33,6 @@ from utils.dataset.beam_dataset import BeamDataset
 from utils.dataset.hard_mining import HardMiningDataset
 from utils.dataset.perturbate_dataset import PerturbateDataset
 from utils.dataset.beam_fgr2r_dataset import BeamFGR2RDataset
-from utils.dataset.trajectory_dataset import TrajectoryDataset
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -220,10 +219,6 @@ def main():
             TrainDataset = BeamFGR2RDataset
         else:
             TrainDataset = BeamDataset
-    elif args.training_mode == "sampled":
-        if default_gpu:
-            logger.info("using sampled training trajectories")
-        TrainDataset = TrajectoryDataset
     else:
         raise ValueError(f"Unknown training_mode for {args.training_mode}")
 

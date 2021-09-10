@@ -8,6 +8,7 @@ import shutil
 from urllib.request import urlopen
 import argtyped
 import networkx as nx
+import gdown
 import numpy as np
 from tqdm import tqdm
 
@@ -45,18 +46,18 @@ BEAMSEARCH_LINKS = [
 CONFIG_LINKS = [
     (
         "data/config/bert_base_6_layer_6_connect.json",
-        "https://dl.dropbox.com/s/bnyv6xau5fhmzgh/bert_base_6_layer_6_connect.json",
+        "https://drive.google.com/uc?id=17mL0qCWnIjqL2GNku8A7CKAi6A8Scogh",
     )
 ]
 
 SPEAKER_LINKS: List[Tuple[str, str]] = [
     (
         "data/task/aug+R2R_train.json",
-        "https://drive.google.com/file/d/1cA2GRF_EGB8cw_XIxk8b6TXSEaWZEDk7/view?usp=sharing",
+        "https://drive.google.com/uc?id=1cA2GRF_EGB8cw_XIxk8b6TXSEaWZEDk7",
     ),
     (
         "data/beamsearch/aug_beams_train.json",
-        "https://drive.google.com/file/d/1ukpTRI6LelEl0_gk10azW_Td95XANL2e/view?usp=sharing",
+        "https://drive.google.com/uc?id=1ukpTRI6LelEl0_gk10azW_Td95XANL2e",
     ),
     (
         "data/task/aug+R2R_val_seen.json",
@@ -73,7 +74,7 @@ SPEAKER_LINKS: List[Tuple[str, str]] = [
     (
         "data/beamsearch/aug_beams_val_unseen.json",
         "https://dl.dropbox.com/s/5m5by9ralaim5nb/beams_val_unseen.json",
-    )
+    ),
 ]
 
 CONNECTIVITY_ROOT_URL = "https://raw.githubusercontent.com/peteanderson80/Matterport3DSimulator/master/connectivity"
@@ -214,8 +215,14 @@ FGR2R_TASK_LINKS = [
 def _download_url_to_file(url, path):
     print(f"downloading {url}...")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with urlopen(url) as response, open(path, "wb") as file:
-        shutil.copyfileobj(response, file)
+
+    if "drive.google" in url:
+        gdown.download(url, path, quiet=False)
+
+    else:
+        with urlopen(url) as response, open(path, "wb") as file:
+            shutil.copyfileobj(response, file)
+
     print(f"downloading {url}... done!")
 
 
@@ -259,12 +266,12 @@ def _generate_distances(scan):
 
 
 class Arguments(argtyped.Arguments):
-    beamsearch: bool = False # only download beamsearch data
-    config: bool = False # only download configuration files
-    connectivity: bool = False # only download connectivity data
-    distances: bool = False # only generate distance data
-    task: bool = False # only download task data
-    speaker: bool = False # only speaker-based data augmented
+    beamsearch: bool = False  # only download beamsearch data
+    config: bool = False  # only download configuration files
+    connectivity: bool = False  # only download connectivity data
+    distances: bool = False  # only generate distance data
+    task: bool = False  # only download task data
+    speaker: bool = False  # only speaker-based data augmented
 
 
 if __name__ == "__main__":

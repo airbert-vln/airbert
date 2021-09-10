@@ -1,0 +1,12 @@
+torch>=1.7.1
+tqdm
+nltk
+numpy
+tensorboardX
+dataclass
+boto3
+requests
+transformers
+networkx
+lmdb
+
