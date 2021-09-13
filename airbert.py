@@ -7,33 +7,16 @@ from vilbert.vilbert import (
     BertPreTrainingHeads as ViLBertPreTrainingHeads,
     BertConfig as ViLBertConfig,
 )
-from prevalent.prevalent import (
-    BertModel as PrevalentModel,
-    BertPreTrainingHeads as PrevalentPreTrainingHeads,
-    BertConfig as PrevalentConfig,
-)
-from oscar.oscar import (
-    BertModel as OscarModel,
-    BertPreTrainedModel as OscarPreTrainedModel,
-    BertPreTrainingHeads as OscarPreTrainingHeads,
-)
-from oscar.modeling_bert import BertConfig as OscarConfig
 
 BERT_CONFIG_FACTORY = {
     "vilbert": ViLBertConfig,
-    "prevalent": PrevalentConfig,
-    "oscar": OscarConfig,
 }
 
 BERT_MODEL_FACTORY = {
     "vilbert": ViLBertModel,
-    "prevalent": PrevalentModel,
-    "oscar": OscarModel,
 }
 CLS_MODEL_FACTORY = {
     "vilbert": ViLBertPreTrainingHeads,
-    "prevalent": PrevalentPreTrainingHeads,
-    "oscar": OscarPreTrainingHeads,
 }
 
 
@@ -86,7 +69,7 @@ class Airbert(PreTrainedModel):
         image_attention_mask=None,
         co_attention_mask=None,
         highlight_tokens=None,
-    )-> Dict[str, torch.Tensor]:
+    ) -> Dict[str, torch.Tensor]:
         (
             sequence_output_t,
             sequence_output_v,
@@ -120,7 +103,6 @@ class Airbert(PreTrainedModel):
         pooled_output = self.dropout(pooled_output)
 
         outputs = {}
-
 
         # if highlight_tokens is not None and highlight_tokens.numel() > 0:
         #     highlight_logit = (
@@ -234,8 +216,8 @@ class VLNOSCAR(OscarPreTrainedModel):
             vil_logit = self.vil_logit(pooled_output)
 
         return {
-                "action": vil_logit,
-                "vision": vision_prediction,
-                "language": linguistic_prediction,
+            "action": vil_logit,
+            "vision": vision_prediction,
+            "language": linguistic_prediction,
             # highlight_prediction,
         }

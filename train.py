@@ -32,7 +32,6 @@ from utils.dataset.common import pad_packed
 from utils.dataset.beam_dataset import BeamDataset
 from utils.dataset.hard_mining import HardMiningDataset
 from utils.dataset.perturbate_dataset import PerturbateDataset
-from utils.dataset.beam_fgr2r_dataset import BeamFGR2RDataset
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -215,8 +214,6 @@ def main():
         if args.hard_mining:
             TrainDataset = HardMiningDataset
             train_params["save_folder"] = str(save_folder)
-        elif args.prefix == "FG":
-            TrainDataset = BeamFGR2RDataset
         else:
             TrainDataset = BeamDataset
     else:
@@ -261,10 +258,7 @@ def main():
     val_seen_params = {}
     val_unseen_params = {}
 
-    if args.prefix == "FG":
-        TestDataset = BeamFGR2RDataset
-    else:
-        TestDataset = BeamDataset
+    TestDataset = BeamDataset
 
     if default_gpu:
         logger.info("Loading val datasets")
