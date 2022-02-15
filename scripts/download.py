@@ -6,7 +6,7 @@ import json
 import os
 import shutil
 from urllib.request import urlopen
-import argtyped
+import tap
 import networkx as nx
 import gdown
 import numpy as np
@@ -265,7 +265,7 @@ def _generate_distances(scan):
         json.dump(d, fid)
 
 
-class Arguments(argtyped.Arguments):
+class Arguments(tap.Tap):
     beamsearch: bool = False  # only download beamsearch data
     config: bool = False  # only download configuration files
     connectivity: bool = False  # only download connectivity data
@@ -275,8 +275,8 @@ class Arguments(argtyped.Arguments):
 
 
 if __name__ == "__main__":
-    args = Arguments()
-    print(args.to_string(width=100))
+    args = Arguments().parse_args()
+    print(args)
 
     download_all = (
         not args.beamsearch

@@ -16,7 +16,11 @@ from torch.utils.data import (
 )
 from torch.utils.data.distributed import DistributedSampler
 
-from apex.parallel import DistributedDataParallel as DDP
+try:
+    from apex.parallel import DistributedDataParallel as DDP
+except ImportError:
+    print("Can't load apex...")
+    from torch.nn.parallel import DistributedDataParallel as DDP
 
 from tensorboardX import SummaryWriter
 

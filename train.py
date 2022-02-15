@@ -15,11 +15,15 @@ from torch import nn
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler, Subset, Dataset
 from torch.utils.data.distributed import DistributedSampler
 
-from apex.parallel import DistributedDataParallel as DDP
+try:
+    from apex.parallel import DistributedDataParallel as DDP
+except ImportError:
+    print("Can't load apex...")
+    from torch.nn.parallel import DistributedDataParallel as DDP
 
 from tensorboardX import SummaryWriter
 
-from transformers import AutoTokenizer, BertTokenizer
+from transformers import BertTokenizer
 
 from vilbert.optimization import AdamW, WarmupLinearSchedule
 from airbert import Airbert, BERT_CONFIG_FACTORY
@@ -64,6 +68,7 @@ def get_score(data_loader: DataLoader, model: nn.Module, default_gpu: bool):
 
     if default_gpu and hasattr(dataset, "save"):
         dataset.save()
+
 
 def compute_metrics(batch: List[torch.Tensor], outputs: Dict[str, torch.Tensor], args) -> Tuple[torch.Tensor, Dict[str, float]]:
     # B, num_cand
@@ -196,10 +201,7 @@ def main():
     # data loaders #
     # ------------ #
 
-    # tokenizer = AutoTokenizer.from_pretrained(args.bert_tokenizer)
     tokenizer = BertTokenizer.from_pretrained(args.bert_tokenizer)
-    if not isinstance(tokenizer, BertTokenizer):
-        raise ValueError("fix mypy")
     features_reader = PanoFeaturesReader(args.img_feature)
     train_params = {}
     vln_path = f"data/task/{args.prefix}R2R_train.json"

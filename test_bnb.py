@@ -12,7 +12,11 @@ import torch
 import torch.distributed as dist
 from torch.utils.data import DataLoader, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
-from apex.parallel import DistributedDataParallel as DDP
+try:
+    from apex.parallel import DistributedDataParallel as DDP
+except ImportError:
+    print("Can't load apex...")
+    from torch.nn.parallel import DistributedDataParallel as DDP
 from tqdm import tqdm
 
 from transformers import AutoTokenizer, BertTokenizer
@@ -179,7 +183,7 @@ def eval_epoch(model, data_loader):
         opt_mask = get_mask_options(batch)
         instr_tokens = get_instr_tokens(batch)
         target = get_target(batch)
-        vil_logit = pad_packed(output[0].squeeze(1), opt_mask)
+        vil_logit = pad_packed(output["ranking"].squeeze(1), opt_mask)
 
         all_scores[listing_ids[0]] = {
             "logit": vil_logit[0].tolist(),
@@ -187,10 +191,6 @@ def eval_epoch(model, data_loader):
             "instr": instr_tokens[0].tolist(),
         }
 
-        # DEBUG
-        counter += 1
-        if counter == 20:
-            break
     return all_scores
 
 

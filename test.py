@@ -11,7 +11,8 @@ from tqdm import tqdm
 
 from transformers import AutoTokenizer, BertTokenizer
 
-from vilbert.vilbert import BertConfig
+
+from airbert import Airbert, BERT_CONFIG_FACTORY
 
 from utils.cli import get_parser
 from utils.dataset.common import pad_packed
@@ -62,10 +63,7 @@ def main():
     # ------------ #
 
     # load a dataset
-    # tokenizer = BertTokenizer.from_pretrained(args.bert_tokenizer, do_lower_case=True)
-    tokenizer = AutoTokenizer.from_pretrained(args.bert_tokenizer)
-    if not isinstance(tokenizer, BertTokenizer):
-        raise ValueError("fix mypy")
+    tokenizer = BertTokenizer.from_pretrained(args.bert_tokenizer)
     features_reader = PanoFeaturesReader(args.img_feature)
 
     vln_data = f"data/task/{args.prefix}R2R_{args.split}.json"
@@ -112,8 +110,12 @@ def main():
     # model #
     # ----- #
 
-    config = BertConfig.from_json_file(args.config_file)
+    config = BERT_CONFIG_FACTORY[args.model_name].from_json_file(args.config_file)
     config.cat_highlight = args.cat_highlight # type: ignore
+    config.no_ranking = False # type: ignore
+    config.masked_language = False # type: ignore
+    config.masked_vision = False # type: ignore
+    config.model_name = args.model_name
     model = Airbert.from_pretrained(args.from_pretrained, config, default_gpu=True)
     model.cuda()
     logger.info(f"number of parameters: {sum(p.numel() for p in model.parameters()):,}")
@@ -156,7 +158,7 @@ def eval_epoch(model, data_loader, args):
         # get the model output
         output = model(*get_model_input(batch))
         opt_mask = get_mask_options(batch)
-        vil_logit = pad_packed(output[0].squeeze(1), opt_mask)
+        vil_logit = pad_packed(output['ranking'].squeeze(1), opt_mask)
 
         for instr_id, logit in zip(instr_ids, vil_logit.tolist()):
             all_scores.append((instr_id, logit))

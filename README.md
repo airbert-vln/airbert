@@ -173,11 +173,43 @@ python train.py \
 
 You can download a pretrained model [from our model zoo](https://github.com/airbert-vln/model-zoos).
 
-## :pregnant_woman: 5. Fine-tuning on REVERIE and R2R in Generative Setting
+## :test_tube: 5. Testing Airbert on R2R with a Discriminative Setting
+
+
+```
+pushd ../model-zoos # https://github.com/airbert-vln/model-zoos
+make airbert-r2rRSA
+popd
+
+# Install dependencies if not already done
+poetry install
+
+# Download data if not already done
+make r2r
+make lmdb
+
+poetry run python test.py \
+  --from_pretrained ../model-zoos/airbert-r2rRSA.bin \
+  --save_name testing \
+  --split val_unseen
+```
+
+### 4.2. Fine-tune with the ranking and the shuffling loss
+
+```
+python train.py \
+  --from_pretrained r2rM.bin \
+  --save_name r2rRS \
+  --shuffle_visual_features
+```
+
+
+
+## :pregnant_woman: 6. Fine-tuning on REVERIE and R2R in Generative Setting
 
 Please see the repository [dedicated for finetuning Airbert in generative setting](https://github.com/airbert-vln/airbert-recurrentvln).
 
-## :four_leaf_clover: 6. Few-shot learning
+## :four_leaf_clover: 7. Few-shot learning
 
 You can build the exact same few-shot learning datasets from this command:
 

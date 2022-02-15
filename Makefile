@@ -14,3 +14,9 @@ speaker : 	## Download data for R2R fine-tuning along with speaker data augmenta
 
 few_shot: 	## Build dataset for few-shot learning
 	python scripts/few_shot.py
+
+lmdb:           ## Download VLN-BERT faster rcnn LMDB
+	mkdir -p data && \
+	wget https://dl.dropbox.com/s/67k2vjgyjqel6og/matterport-ResNet-101-faster-rcnn-genome.lmdb.zip -P data && \
+	cd data && \
+	unzip matterport-ResNet-101-faster-rcnn-genome.lmdb
