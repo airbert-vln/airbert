@@ -19,15 +19,14 @@ except ImportError:
     from torch.nn.parallel import DistributedDataParallel as DDP
 from tqdm import tqdm
 
-from transformers import AutoTokenizer, BertTokenizer
+from transformers import BertTokenizer
 
-from vilbert.vilbert import BertConfig
+from airbert import Airbert, BERT_CONFIG_FACTORY
 
 from utils.cli import get_parser
 from utils.dataset.common import pad_packed, save_json_data
 from utils.dataset import BnBFeaturesReader
 from utils.dataset.bnb_dataset import BnBDataset
-from utils.dataset import PanoFeaturesReader
 
 from airbert import Airbert
 from train import get_model_input, get_mask_options, get_target
@@ -139,8 +138,12 @@ def main():
     # model #
     # ----- #
 
-    config = BertConfig.from_json_file(args.config_file)
-    config.cat_highlight = args.cat_highlight  # type: ignore
+    config = BERT_CONFIG_FACTORY[args.model_name].from_json_file(args.config_file)
+    config.cat_highlight = args.cat_highlight # type: ignore
+    config.no_ranking = False # type: ignore
+    config.masked_language = False # type: ignore
+    config.masked_vision = False # type: ignore
+    config.model_name = args.model_name
     model = Airbert.from_pretrained(args.from_pretrained, config, default_gpu=True)
     logger.info(f"number of parameters: {sum(p.numel() for p in model.parameters()):,}")
 
