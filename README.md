@@ -46,10 +46,11 @@ sbatch --job-name $name \
 
 Make sure you have the following dataset file:
 
-```
-data/bnb/bnb_train.json
-data/bnb/bnb_test.json
-data/bnb/testset.json
+- data/bnb/bnb_train.json
+- data/bnb/bnb_test.json
+- data/bnb/testset.json
+
+Then, launch training:
 
 ```bash
 python train_bnb.py \
@@ -67,10 +68,11 @@ python train_bnb.py \
 
 Make sure you have the following dataset file:
 
-```
-data/bnb/merge+bnb_train.json
-data/bnb/merge+bnb_test.json
-data/bnb/merge+testset.json
+- data/bnb/merge+bnb_train.json
+- data/bnb/merge+bnb_test.json
+- data/bnb/merge+testset.json
+
+Then, launch training:
 
 ```bash
 python train_bnb.py \
@@ -88,10 +90,11 @@ python train_bnb.py \
 
 Make sure you have the following dataset file:
 
-```
-data/bnb/2capt+bnb_train.json
-data/bnb/2capt+bnb_test.json
-data/bnb/2capt+testset.json
+- data/bnb/2capt+bnb_train.json
+- data/bnb/2capt+bnb_test.json
+- data/bnb/2capt+testset.json
+
+Then, launch training:
 
 ```bash
 python train_bnb.py \
@@ -108,11 +111,12 @@ python train_bnb.py \
 
 Make sure you have the following dataset file:
 
-```
-data/bnb/np+bnb_train.json
-data/bnb/np+bnb_test.json
-data/bnb/np+testset.json
-data/np_train.json
+* data/bnb/np+bnb_train.json
+* data/bnb/np+bnb_test.json
+* data/bnb/np+testset.json
+* data/np_train.json
+
+Then, launch training:
 
 ```bash
 python train_bnb.py \
