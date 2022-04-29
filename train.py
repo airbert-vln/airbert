@@ -115,7 +115,7 @@ def compute_metrics(batch: List[torch.Tensor], outputs: Dict[str, torch.Tensor],
     correct = torch.tensor(0, device=device)
     if not args.no_ranking:
         target = get_target(batch)
-        vil_logit = pad_packed(outputs["action"].squeeze(1), opt_mask)
+        vil_logit = pad_packed(outputs["ranking"].squeeze(1), opt_mask)
         ranking_loss = F.cross_entropy(vil_logit, target, ignore_index=-1)
         # calculate accuracy
         correct = torch.sum(torch.argmax(vil_logit, 1) == target).float()
@@ -638,7 +638,7 @@ def val_epoch(epoch: int, model, tag, data_loader, writer, default_gpu, args, gl
         opt_mask = batch[13]
 
         if not args.no_ranking:
-            vil_logit = pad_packed(outputs["action"].squeeze(1), opt_mask)
+            vil_logit = pad_packed(outputs["ranking"].squeeze(1), opt_mask)
 
             # calculate loss
             loss = F.binary_cross_entropy_with_logits(vil_logit, target.float())
