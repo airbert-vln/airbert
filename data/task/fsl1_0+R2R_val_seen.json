@@ -1,0 +1,136 @@
+[
+  {
+    "distance": 13.85,
+    "scan": "82sE5b5pLXE",
+    "path_id": 2722,
+    "path": [
+      "f3aa7887b82f4e1787dca604277580bd",
+      "db42868ee24c45dcb7cd4f5ae61f47fe",
+      "ad3a2912de974a5690af5050e6ade942",
+      "af2982c371134df79520b348071775a0",
+      "49913376d9ab471a8fce92a8edc786b9",
+      "6c7301f898ff4b4c9d915dfbe887d507",
+      "f7a2350f36174c5e80dce2d3b77fb777"
+    ],
+    "heading": 4.904,
+    "instructions": [
+      "Exit the bathroom, take a right, travel up the stairs, then take a left until you reach a gate. ",
+      "Exit the bathroom and go straight to the cabinets. Make a right down the hall and continue up the stairs. Turn left and wait in front of the doorway. ",
+      "Go to the light switch. Go to the thermostat. Go to the stairs. Go to the glass vase. Go to the green vase. Go to the plant. "
+    ]
+  },
+  {
+    "distance": 13.52,
+    "scan": "82sE5b5pLXE",
+    "path_id": 3755,
+    "path": [
+      "3797fe9d97b14ccda8c346ddd7cc1c67",
+      "846c8d973a1a460ca942e15733cddc71",
+      "ad3a2912de974a5690af5050e6ade942",
+      "af2982c371134df79520b348071775a0",
+      "49913376d9ab471a8fce92a8edc786b9",
+      "6c7301f898ff4b4c9d915dfbe887d507",
+      "c22f5ecc360048698e71cad6542f07a6"
+    ],
+    "heading": 0.156,
+    "instructions": [
+      "Exit the door on the left then turn slightly left to go straight down the hallway. Go up the steps then turn left and go out the door on the left and stop. ",
+      "Turn left and exit the room. Once out, turn left and walk forward and then turn right. Go up the small stairs. Once at the top, turn left and walk forward out the doors leading outside. Stop once you are outside the door. ",
+      "With the bed behind you, exit the room through the door ahead of you, taking a dogleg to the left and heading towards the short flight of five steps. After climbing the steps, veer slightly left and pass by the opening on your left, heading towards a door leading outside. Stop once you pass through that door opening. "
+    ]
+  },
+  {
+    "distance": 8.36,
+    "scan": "82sE5b5pLXE",
+    "path_id": 3982,
+    "path": [
+      "3752abb606954f6d968d77b2d06caefd",
+      "49913376d9ab471a8fce92a8edc786b9",
+      "e580467633814488b0055f9e5475fedc",
+      "87c5df0ecfc34be3be7b828fc7a60c21",
+      "80055e4f7f804bd28d38a2db363f9dc7",
+      "bbb58ec45ea54a879252ecefa351559b"
+    ],
+    "heading": 4.254,
+    "instructions": [
+      "Leave the room and head towards the piano. Enter the office area behind the piano. ",
+      "Walk out of the room and take a left. Walk past the piano and wait next to the bookshelf. ",
+      "Exit room, go along the wall toward the piano, turn right before the piano, turn right into the bookshelf room and stop. "
+    ]
+  },
+  {
+    "distance": 9.2,
+    "scan": "82sE5b5pLXE",
+    "path_id": 2248,
+    "path": [
+      "5ae7323b784748f7a3c2f7c93d60914a",
+      "62e1c55d62054d149d3d23431ffe4289",
+      "3a092061063d41c5b5e54e692341c62e",
+      "e580467633814488b0055f9e5475fedc",
+      "3e2bda227e78440fbcaf5ea18f128088",
+      "1226e70df8e44d6596ea46945a62f689",
+      "af2982c371134df79520b348071775a0"
+    ],
+    "heading": 0.124,
+    "instructions": [
+      "Walk around the brick wall toward the seating area.  Go right to go up the two steps then walk forward and go down the next set of stairs.  Stop at the bottom of the stairs next to an open room with a couch in it. ",
+      "Turn right at the staircase then walk up the two stone steps. Walk down the stairs by the curious cabinet. Stop next to the open doorway. ",
+      "Go down the stairs and turn right, walking past the piano and up the two steps. Continue forward and walk down the 5 steps. Stop when you get down the steps. "
+    ]
+  },
+  {
+    "distance": 14.07,
+    "scan": "82sE5b5pLXE",
+    "path_id": 5375,
+    "path": [
+      "4634c0c3c11f4903b3580e014fb80deb",
+      "cb23dd6321364fd99dffde7d066934eb",
+      "3752abb606954f6d968d77b2d06caefd",
+      "49913376d9ab471a8fce92a8edc786b9",
+      "3a092061063d41c5b5e54e692341c62e",
+      "dc524a4004ae4faaaf8e4978f7ad7897"
+    ],
+    "heading": 2.731,
+    "instructions": [
+      "Exit the room using the door straight ahead. Turn left and then turn left again. Pass the grand piano on the right and wait inside the fireplace. ",
+      "Go through the room, go to the left of the doorways through the way, go straight passed the piano on the right, step close to the fireplace and then stop. ",
+      "Cross the room and exit out the doorway on the left. Walk towards the cabinet with drawers and then turn left to enter the room with the piano. Walk to the fireplace and stop right in front of it in the middle. "
+    ]
+  },
+  {
+    "distance": 8.64,
+    "scan": "82sE5b5pLXE",
+    "path_id": 6000,
+    "path": [
+      "9f87a56612484ddd9784377af43f9b51",
+      "d1a56fbfc2a44566aff53cab76124e44",
+      "6c7301f898ff4b4c9d915dfbe887d507",
+      "49913376d9ab471a8fce92a8edc786b9",
+      "43b8e298f5c6479d8f839c7cc7ff3fe2"
+    ],
+    "heading": 0.987,
+    "instructions": [
+      "Walk forward and enter the door on your right. Once inside the house, Turn right and walk to the doorway on your right that leads to more doors and stop. ",
+      "Go past the plants and through the doorway.  Head past the wooden shelf and turn right stopping in the doorway. ",
+      "Walk forward and enter the house. Veer right and enter the doorway on the left of the bookcase. Stop in the doorway. "
+    ]
+  },
+  {
+    "distance": 9.75,
+    "scan": "82sE5b5pLXE",
+    "path_id": 6117,
+    "path": [
+      "2ca64ac5923c499ab3e8f94063be38a5",
+      "d1a56fbfc2a44566aff53cab76124e44",
+      "c22f5ecc360048698e71cad6542f07a6",
+      "119a529d3eef42ef898fbee6ca019866",
+      "3a092061063d41c5b5e54e692341c62e"
+    ],
+    "heading": 1.278,
+    "instructions": [
+      "Enter into the house through the open door. Follow the brick pathway up to the door. The hillside will be to your right. Once you are in the house, walk down the entry way and down the two stairs on the left into the foyer area. Stop to the left of the piano. ",
+      "Walk into the door near the potted plants.  Turn slight left, and wait next to the piano. ",
+      "Go towards the potted plants, go through the doorway on the right, go straight and then to the left around the circle and go down the two steps and stop. "
+    ]
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "distance": 8.15,
+    "scan": "qoiz87JEwZ2",
+    "path_id": 2517,
+    "path": [
+      "0f8bcd34032f4906b530b3979a9be63b",
+      "c3cef9dfbba149ecbf67c4375b52a733",
+      "a515a42b3cfa4005affc8b3f14d8ca2d",
+      "e5c88ad5db1a4b3a977455b0c161d792",
+      "de655166da274d40841f1e5e488ab641"
+    ],
+    "heading": 5.154,
+    "instructions": [
+      "Go straight then turn left and go into the house and then pass the two Christmas trees and go through the door straight ahead and stop. ",
+      "Walk left past the table and chairs and through the doorway. Walk through the doorway across the room and stop. ",
+      "Walk down the porch and enter the house through the first door on the left. Go straight and exit the room. Stop once you step on the rug. "
+    ]
+  },
+  {
+    "distance": 8.42,
+    "scan": "qoiz87JEwZ2",
+    "path_id": 2524,
+    "path": [
+      "be3d7ae0352d481191e4c9e351e71b08",
+      "88f5ba9d06ac4413b1a3908af6544308",
+      "0a796daf5b734fbbb52974e2349a6c0e",
+      "de655166da274d40841f1e5e488ab641",
+      "e5c88ad5db1a4b3a977455b0c161d792",
+      "a515a42b3cfa4005affc8b3f14d8ca2d",
+      "6a15f715d61843b2a84845d392ec0b72"
+    ],
+    "heading": 1.874,
+    "instructions": [
+      "Walk straight through the double doors and turn left. Open the double doors straight ahead and wait just outside on the porch. ",
+      "Walk out the double doors in front of you. Turn left and walk through the next door. Walk forward into the area with the small desk. Walk out the doors to go outside and stop once outside. ",
+      "Walk straight ahead, through the double french doors, and turn left into the door that reads \"Master Suite\".  Continue to walk straight ahead, past the desk and chair, out the door that leads to the outside porch.  Stop on the porch, standing to the right of the black iron chair. "
+    ]
+  },
+  {
+    "distance": 11.65,
+    "scan": "qoiz87JEwZ2",
+    "path_id": 1357,
+    "path": [
+      "bdb1023cb7cc4ebd8245b9291fcbc1a2",
+      "a6ba3f53b7964464b23341896d3c75fa",
+      "c407e34577aa4724b7e5d447a5d859d1",
+      "9f68b19f50d14f5d8371447f73c3a2e3",
+      "150763c717894adc8ccbbbe640fa67ef",
+      "59b190857cfe47f691bf0d866f1e5aeb",
+      "267a7e2459054db7952fc1e3e45e98fa"
+    ],
+    "heading": 4.59,
+    "instructions": [
+      "Walk into the dining room and continue past the table. Turn left when you see an opening and walk through the living room.Walk through the living room and continue past the next opening. Stop when you enter the opening. ",
+      "Exit the kitchen area via the doorway to your slight left. Walk across the dining table area. Turn right and walk past the blue chair/sofa by the Christmas tree. Wait there. ",
+      "Walk out of the kitchen into the dining room. Walk towards the doorway to the sitting room. Veer right to walk out of the sitting room to the foyer. Stop next to the blue chair. "
+    ]
+  },
+  {
+    "distance": 11.24,
+    "scan": "qoiz87JEwZ2",
+    "path_id": 3526,
+    "path": [
+      "be3d7ae0352d481191e4c9e351e71b08",
+      "f17bd928d5c84ebbb4d2d8806682f4af",
+      "024edcc6db70425aaa54f5596b0ebda8",
+      "61aa57f78ebf40dd9bc04e27b1a4c80f",
+      "41873d3929e64a9a938a5fac3b6bbd79",
+      "091c189689a74ae3908ba76361e0cae0",
+      "50e0cf4daca44c7a9e2a6f6475650ca3"
+    ],
+    "heading": 1.874,
+    "instructions": [
+      "Go downstairs then walk toward the double doorway on your left.  Enter the room and stop near the fireplace with the white stockings. ",
+      "Walk all the way down the stairs. Take a left. Walk through doorway. Stop near the fireplace. ",
+      "Walk down the stairs Walk past the door with the oval glass and head into the living room. Stop by the chair right through the doorway. "
+    ]
+  },
+  {
+    "distance": 12.38,
+    "scan": "qoiz87JEwZ2",
+    "path_id": 4317,
+    "path": [
+      "150763c717894adc8ccbbbe640fa67ef",
+      "59b190857cfe47f691bf0d866f1e5aeb",
+      "124c7635126f4fefaf3c57742dbe1193",
+      "61aa57f78ebf40dd9bc04e27b1a4c80f",
+      "024edcc6db70425aaa54f5596b0ebda8",
+      "f17bd928d5c84ebbb4d2d8806682f4af",
+      "be3d7ae0352d481191e4c9e351e71b08"
+    ],
+    "heading": 2.975,
+    "instructions": [
+      "Stand with the dining room behind you and the Christmas tree on your left.  Walk through the room over the red carpet into the bigger entrance area.  Walk up the stairs by the Christmas tree and stop at the very top. ",
+      "Turn around and walk through the den, then walk up the stairs to the top.  Wait by the door. ",
+      "Turn around and walk through the den past the Christmas trees.  Then walk up the stairs to the top. "
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "distance": 11.6,
+    "scan": "7y3sRwLe3Va",
+    "path_id": 6488,
+    "path": [
+      "f0db0d83f9d646b997d099d7eae80dd1",
+      "f6a03fba4dfd415a8b65cce84ee21c19",
+      "d7f5f168d31547ce866159165b644da5",
+      "554ecce763be4bd49e89c1bfb89676f3",
+      "180b0d7146704223a12bcef6699d0121",
+      "cd200cef3d824df19eadb99c5224e733"
+    ],
+    "heading": 1.722,
+    "instructions": [
+      "Walk toward the dining room but turn left before entering it and go into the open area.  Turn right at the round table and walk towards the closed front door.  Start to go up the stairs on your right and stop after going up two steps. ",
+      "Exit the kitchen, walk towards the front door and stop on the landing at the base of the stairs. ",
+      "Go into the archway to the left of the room with the dining table into the room with the circle table in the middle, make a right towards the front door, take two steps up the stairs onto the level and stop. "
+    ]
+  },
+  {
+    "distance": 13.3,
+    "scan": "7y3sRwLe3Va",
+    "path_id": 6995,
+    "path": [
+      "152b7ad4b471410a8557ce5fc2c9147a",
+      "450b5325b5bf48f0a8076bb973b42fdf",
+      "fd4752f551d04e22be492adea0d9fb04",
+      "9ee37c1bce0a41e8bd50821540e80713",
+      "af5f1942b4374015823bd32e31b31c64",
+      "d8cae4c7073346e392d3996254bf741c",
+      "e29484c59af4429981a6a5d5afe4d5a0"
+    ],
+    "heading": 2.42,
+    "instructions": [
+      "Exit the bedroom and turn left. Go around the corner and down the hallway. Make a right turn and stop in the doorway on the right. ",
+      "Exit the room via the door on the left.  After walking into the bigger room, turn left.  Walk a few steps and walk left again down the hallway.  When the hallway ends in a door, turn right and stand in the doorway of that room. ",
+      "Turn left and exit the room. Turn left and another left. Wait in the doorway of the unfinished room on the right. "
+    ]
+  },
+  {
+    "distance": 9.29,
+    "scan": "7y3sRwLe3Va",
+    "path_id": 251,
+    "path": [
+      "2cbca953eeaf437799479c9111c1ee8a",
+      "180b0d7146704223a12bcef6699d0121",
+      "e1081fac8ed843dd8afe30f5fe1ddbca",
+      "1d5c1b5e0a164fd8860723b2069f9b6a",
+      "bc561d6547f44d568a59ddae163df0d8"
+    ],
+    "heading": 2.221,
+    "instructions": [
+      "Turn around and walk towards the table with the plant on it.  Turn to the right and walk into the living room and stand just behind the couch and wait. ",
+      "Walk alongside the staircase through the hall towards the backdoor of the home. Turn the corner into the living room area with couches. ",
+      "Walk forward past the console table on the right into the open area. In the open area take a  right into the living room. In the living room take a right, and stop behind the couch near the right corner. "
+    ]
+  },
+  {
+    "distance": 10.87,
+    "scan": "7y3sRwLe3Va",
+    "path_id": 2176,
+    "path": [
+      "50df19b5012e4451870d16320747ff9b",
+      "3429ecc6a320475fada43d43848b9aae",
+      "b6c62c6714d44a7080c83ec374607bcb",
+      "b564162b2c7d4033bfe6ef3dfb959c9e",
+      "9e4c92fd7eb74504baecf55a3264716e",
+      "6376b741b50a4418b3dc3fde791c3c09",
+      "1838a8fb8e9f48cebcd079d5373cba02"
+    ],
+    "heading": 5.925,
+    "instructions": [
+      "Walk through the door towards the hallway. Take a right and wait at the end of the hallway. ",
+      "Walk forward trough the doorway, then turn right. Stop in the next doorway. ",
+      "Exit the door on the right. Once in the hallway, turn right and walk all the way down the hallway and stop in the doorway straight in front of you. "
+    ]
+  },
+  {
+    "distance": 9.02,
+    "scan": "7y3sRwLe3Va",
+    "path_id": 1791,
+    "path": [
+      "0662f8da68b94d83a47af1e38f28f4e5",
+      "27b26e3f29384e60944fc6151074b172",
+      "e1081fac8ed843dd8afe30f5fe1ddbca",
+      "180b0d7146704223a12bcef6699d0121",
+      "cd200cef3d824df19eadb99c5224e733"
+    ],
+    "heading": 2.131,
+    "instructions": [
+      "Walk up the stair into the room on the next floor up. Walk through the room past the double doors and towards the stairwell by the front door. Walk up the first steps and stop on the lower platform of the staircase. ",
+      "Walk up stairs. Make right at top of stairs. Walk past foyer bench. Wait on second step from bottom. ",
+      "Turn around and finish walking up the stairs. Turn right and walk towards the wall. Turn right again and walk up a few steps on the stairs. Wait there. "
+    ]
+  }
+]

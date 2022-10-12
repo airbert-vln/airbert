@@ -1,0 +1,80 @@
+[
+  {
+    "distance": 12.39,
+    "scan": "PX4nDJXEHrG",
+    "path_id": 5354,
+    "path": [
+      "fefbf5f40d364b0fb096d1d93aba4316",
+      "81829ab350054bf297a7ebbb1eb4fcee",
+      "a2131c9b8e674c3db73821fb924f1644",
+      "cd289dfb2a4d4161ab18c8b0e7889f0d",
+      "e1ff49c1e5114971af1f3f6df0c155b2",
+      "36932f17cd6f4351ac3a9efd6632e0c9",
+      "5e67772d3b8e45afb565072f436e590b"
+    ],
+    "heading": 1.635,
+    "instructions": [
+      "Go to the bear rug on the floor. Go to the top of the staircase. Go to the toilet. ",
+      "Exit bedroom, walk straight turning right at stairwell and enter bathroom on the left. Wait at toilet. ",
+      "Turn around and exit the bedroom. Walk to the other side of the room past the stairs. Once you reach the other side, turn right and enter the double doors. Walk into the small hallway and then enter the first door on your left. Once in, stop in front of the shower stall on your right. "
+    ]
+  },
+  {
+    "distance": 11.09,
+    "scan": "PX4nDJXEHrG",
+    "path_id": 193,
+    "path": [
+      "f0d1e88ba92440e1ae9a10336f1066a4",
+      "bfb78765ec3e4eb7aebdea9e7c2bf047",
+      "c662afaab01a4c338d739c7600478db2",
+      "9bd6013e7ccd46c28789c54605a56151",
+      "ee987ba0e8ee44c1a95ff0f958f31791",
+      "c8ce61375bc8403691ec503de5401235",
+      "2847ac3356dd462cb57c4f7f7ada4146"
+    ],
+    "heading": 6.235,
+    "instructions": [
+      "Go out the door. turn left and go out that door. Turn right and go toward the table. Proceed to the stairs on the right. ",
+      "Go toward the door. Turn left by the black vanity. You will see an indoor glass window. Go toward the glass window and through the doorway. When your in the hallway by the  window take a right. Go toward the table with the pictures on it. Then go toward the wall with the security box or thermostat. Next and finally you take a right and when you get to the side of the stairs you have arrived. ",
+      "Walk out of the bathroom and take a right. Then take a left. Take another right and wait at the top of the stairs. "
+    ]
+  },
+  {
+    "distance": 8.26,
+    "scan": "PX4nDJXEHrG",
+    "path_id": 5177,
+    "path": [
+      "8a2aeda8632c4fb38e51733e873ae813",
+      "ad24c52938c34a25b7a7c694d4769f30",
+      "349df9d6cf9647a38ec403d5fcffb690",
+      "72e5cd657af64e8297f6ee20aa46edd5",
+      "6f87bf60f1984f31a2af16a91f502ad9",
+      "38808050304946dfb262966b02c6ae4e"
+    ],
+    "heading": 3.13,
+    "instructions": [
+      "Go into the garage. Turn right and go into the fitness room. From the fitness room, turn right and go into the shower room. ",
+      "Go straight into the garage. Turn right and go into the room. Turn right and go into the bathroom. Wait near the sink. ",
+      "Walk into the garage and enter the fitness room on the right. Go into the bathroom through the first door on the right. Stop in front of the toilet. "
+    ]
+  },
+  {
+    "distance": 9.24,
+    "scan": "PX4nDJXEHrG",
+    "path_id": 7155,
+    "path": [
+      "a2131c9b8e674c3db73821fb924f1644",
+      "81829ab350054bf297a7ebbb1eb4fcee",
+      "fefbf5f40d364b0fb096d1d93aba4316",
+      "dec940911e0a44e7b51b8fa218fb3550",
+      "37376bc376de4a1bbff1e45f6f420d0f",
+      "673c93ec5cfd45efb87f064bd4723f8d"
+    ],
+    "heading": 1.564,
+    "instructions": [
+      "Enter the door on the right. Follow the right wall and stop once you've entered the doorway. ",
+      "Go straight ahead and enter the bedroom. Turn right then enter the next door and stop inside. ",
+      "Go through the room passed the black chair on the left and into the doorway on the right, go straight into the bedroom, make a right and then another right into the doorway and take a step in and stop. "
+    ]
+  }
+]

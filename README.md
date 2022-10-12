@@ -206,11 +206,7 @@ Please see the repository [dedicated for finetuning Airbert in generative settin
 
 ## :four_leaf_clover: 7. Few-shot learning
 
-You can build the exact same few-shot learning datasets from this command:
-
-```bash
-make fewshot
-```
+The datasets are provided in `data/task/`
 
 
 ## Citing our paper
